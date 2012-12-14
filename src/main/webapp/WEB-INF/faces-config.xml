@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+	version="2.0">
+
+	<navigation-rule>
+		<from-view-id>start.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>payment</from-outcome>
+			<if>#{payment.orderQty &lt; 100}</if>
+			<to-view-id>WEB-INF/payment/ordermore.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>payment</from-outcome>
+			<if>#{payment.registerCompleted}</if>
+			<to-view-id>WEB-INF/payment/payment.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>payment</from-outcome>
+			<to-view-id>WEB-INF/payment/register.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>startFormActionFlow.xhtml</from-view-id>
+		<navigation-case>
+			<from-action>#{pageControl.processPage1}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>WEB-INF/pagecontrol/outcomePage1.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{pageControl.processPage2}</from-action>
+			<from-outcome>success</from-outcome>
+			<to-view-id>WEB-INF/pagecontrol/outcomePage2.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+</faces-config>

@@ -90,9 +90,34 @@ Issue "mvn tomcat:deploy" to package your project in a WAR file, and deploy it t
 URL : http://127.0.0.1:8080/manager/
 
 
+                               Configure Managed Bean with XML
+
+With XML configuration, you can use the old JSF 1.x mechanism to define the managed bean in a normal faces-config.xml file.
+ Best Practice
+It’s recommended to put the managed beans in a separate XML file because the faces-config.xml is used to set the application level configurations.
+
+So, you should create a new XML file and put the managed beans detail inside, and declared the XML file in the javax.faces.CONFIG_FILES initialize parameter, which is inside the WEB-INF/web.xml file.
+
+web.xml
+
+ ...
+ <context-param>
+    <param-name>javax.faces.CONFIG_FILES</param-name>
+    <param-value>WEB-INF/manage-beans.xml</param-value>
+  </context-param>
+...
+
 
 URL to look out for:
 
 1. Hello World : http://localhost:8080/JavaServerFaces/hello.jsf
 
 2. Hello World AJAX : http://localhost:8080/JavaServerFaces/helloAjax.jsf
+
+3. JSF 2.0 redirect and view URL bar : http://localhost:8080/JavaServerFaces/page1.jsf
+
+4. Conditional Navigation Flow : http://localhost:8080/JavaServerFaces/start.jsf (also see PaymentController and faces-config.xml)
+
+5. Form-Action Navigation Flow : http://localhost:8080/JavaServerFaces/startFormActionFlow.jsf (also see PageController and faces-config.xml)
+
+

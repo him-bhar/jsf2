@@ -22,7 +22,6 @@ public class HelloBean implements Serializable {
 	}
 
 	public String getSayWelcome() throws InterruptedException {
-		Thread.currentThread().sleep(3000);
 		if ("".equals(name) || name == null) {
 			return "";
 		} else {
