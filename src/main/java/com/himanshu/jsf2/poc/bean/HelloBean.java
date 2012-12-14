@@ -1,8 +1,9 @@
 package com.himanshu.jsf2.poc.bean;
 
+import java.io.Serializable;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import java.io.Serializable;
 
 @ManagedBean
 @SessionScoped
@@ -19,4 +20,14 @@ public class HelloBean implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+	public String getSayWelcome() throws InterruptedException {
+		Thread.currentThread().sleep(3000);
+		if ("".equals(name) || name == null) {
+			return "";
+		} else {
+			return "Ajax message : Welcome " + name;
+		}
+	}
+
 }
