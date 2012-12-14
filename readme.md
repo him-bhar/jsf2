@@ -120,4 +120,6 @@ URL to look out for:
 
 5. Form-Action Navigation Flow : http://localhost:8080/JavaServerFaces/startFormActionFlow.jsf (also see PageController and faces-config.xml)
 
+6. JSF 2.0 and message-bundle properties : http://localhost:8080/JavaServerFaces/helloMessageBundle.jsf
 
+7. JSF 2.0 and message-I18n properties Internationalization : http://localhost:8080/JavaServerFaces/startI18n.jsf
