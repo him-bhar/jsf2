@@ -133,3 +133,5 @@ URL to look out for:
 11. JSF 2.0 and input Checkbox control demo : http://localhost:8080/JavaServerFaces/ui-controls/checkboxControl.xhtml
 
 12. JSF 2.0 and input Radiobutton control demo : http://localhost:8080/JavaServerFaces/ui-controls/radioButtonControl.xhtml
+
+13. JSF 2.0 and input Listbox control demo : http://localhost:8080/JavaServerFaces/ui-controls/listboxControl.xhtml
