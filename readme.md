@@ -123,3 +123,13 @@ URL to look out for:
 6. JSF 2.0 and message-bundle properties : http://localhost:8080/JavaServerFaces/helloMessageBundle.jsf
 
 7. JSF 2.0 and message-I18n properties Internationalization : http://localhost:8080/JavaServerFaces/startI18n.jsf
+
+8. JSF 2.0 and input Text control demo : http://localhost:8080/JavaServerFaces/ui-controls/textboxControl.xhtml
+
+9. JSF 2.0 and input Secret control demo : http://localhost:8080/JavaServerFaces/ui-controls/textboxControl.xhtml
+
+10. JSF 2.0 and input Textarea control demo : http://localhost:8080/JavaServerFaces/ui-controls/textboxControl.xhtml
+
+11. JSF 2.0 and input Checkbox control demo : http://localhost:8080/JavaServerFaces/ui-controls/checkboxControl.xhtml
+
+12. JSF 2.0 and input Radiobutton control demo : http://localhost:8080/JavaServerFaces/ui-controls/radioButtonControl.xhtml
