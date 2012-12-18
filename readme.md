@@ -135,3 +135,7 @@ URL to look out for:
 12. JSF 2.0 and input Radiobutton control demo : http://localhost:8080/JavaServerFaces/ui-controls/radioButtonControl.xhtml
 
 13. JSF 2.0 and input Listbox control demo : http://localhost:8080/JavaServerFaces/ui-controls/listboxControl.xhtml
+
+14. JSF 2.0 and input Multiselect Listbox control demo : http://localhost:8080/JavaServerFaces/ui-controls/multiselectListboxControl.jsf
+
+15. JSF 2.0 and input SelectOneMenu DropDown Control : http://localhost:8080/JavaServerFaces/ui-controls/selectOneMenuControl.jsf
