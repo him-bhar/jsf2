@@ -139,3 +139,11 @@ URL to look out for:
 14. JSF 2.0 and input Multiselect Listbox control demo : http://localhost:8080/JavaServerFaces/ui-controls/multiselectListboxControl.jsf
 
 15. JSF 2.0 and input SelectOneMenu DropDown Control : http://localhost:8080/JavaServerFaces/ui-controls/selectOneMenuControl.jsf
+
+15. JSF 2.0 and OutputText Tag : http://localhost:8080/JavaServerFaces/ui-controls/outputText/outputText.xhtml
+
+16. JSF 2.0 and OutputFormat Tag (Display parameterized text) : http://localhost:8080/JavaServerFaces/ui-controls/outputFormat/outputFormat.xhtml
+
+17. JSF 2.0 and Graphic Image Tag : http://localhost:8080/JavaServerFaces/ui-controls/graphicImage/graphicImageControl.xhtml
+
+18. JSF 2.0 and Output Style Sheet : http://localhost:8080/JavaServerFaces/ui-controls/outputStyleSheet/outputStyleSheetControl.xhtml
