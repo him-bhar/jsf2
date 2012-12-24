@@ -147,3 +147,17 @@ URL to look out for:
 17. JSF 2.0 and Graphic Image Tag : http://localhost:8080/JavaServerFaces/ui-controls/graphicImage/graphicImageControl.xhtml
 
 18. JSF 2.0 and Output Style Sheet : http://localhost:8080/JavaServerFaces/ui-controls/outputStyleSheet/outputStyleSheetControl.xhtml
+
+19. JSF 2.0 and Output Script : http://localhost:8080/JavaServerFaces/ui-controls/jsRes/outputScript.xhtml
+
+20. JSF 2.0 link, commandLink and outputLink example : http://localhost:8080/JavaServerFaces/ui-controls/link/login.xhtml
+
+21. JSF 2.0 panelGrid example, In JSF , "h:panelGrid" tag is used to generate HTML table tags to place JSF components in rows and columns layout, from left to right, top to bottom (To test enter Alphabets not number) : http://localhost:8080/JavaServerFaces/ui-controls/panelGrid/panelGrid.jsf
+
+22. JSF 2.0 message and messages example, To view this output, enter invalid inputs like, less-than 5 letter string, and age above 200 : http://localhost:8080/JavaServerFaces/ui-controls/message/message.jsf
+
+23. JSF 2.0 In JSF, "f:param" tag allow you to pass a parameter to a component, but it's behavior is different depends on which type of component it's attached : http://localhost:8080/JavaServerFaces/ui-controls/param/param.xhtml
+
+24. JSF 2.0 attribute example, In JSF, "f:attribute" tag allow you to pass a attribute value to a component, or a parameter to a component via action listener. : http://localhost:8080/JavaServerFaces/ui-controls/attribute/attribute.xhtml
+
+25. JSF 2 setPropertyActionListener example, In JSF, "f:setPropertyActionListener" tag is allow you to set a value directly into the property of your backing bean : http://localhost:8080/JavaServerFaces/ui-controls/setPropertyActionListener/setPropertyActionListener.xhtml
