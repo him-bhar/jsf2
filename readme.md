@@ -160,4 +160,10 @@ URL to look out for:
 
 24. JSF 2.0 attribute example, In JSF, "f:attribute" tag allow you to pass a attribute value to a component, or a parameter to a component via action listener. : http://localhost:8080/JavaServerFaces/ui-controls/attribute/attribute.xhtml
 
-25. JSF 2 setPropertyActionListener example, In JSF, "f:setPropertyActionListener" tag is allow you to set a value directly into the property of your backing bean : http://localhost:8080/JavaServerFaces/ui-controls/setPropertyActionListener/setPropertyActionListener.xhtml
+25. JSF 2.0 setPropertyActionListener example, In JSF, "f:setPropertyActionListener" tag is allow you to set a value directly into the property of your backing bean : http://localhost:8080/JavaServerFaces/ui-controls/setPropertyActionListener/setPropertyActionListener.xhtml
+
+26. JSF 2.0 and dataTable sample : http://localhost:8080/JavaServerFaces/table/displayTable.jsf
+
+27. JSF 2.0 and add new order sample : http://localhost:8080/JavaServerFaces/table/addOrder.jsf
+
+28. JSF 2.0 and delete order using AJAX and table refresh : http://localhost:8080/JavaServerFaces/table/displayTable.jsf (Click on the delete link (present against each order) after adding a new order)
