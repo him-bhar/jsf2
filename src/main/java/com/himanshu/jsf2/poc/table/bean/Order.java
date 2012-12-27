@@ -16,6 +16,16 @@ public class Order {
 	BigDecimal price;
 	int qty;
 
+	boolean editable = false;
+
+	public boolean isEditable() {
+		return editable;
+	}
+
+	public void setEditable(boolean editable) {
+		this.editable = editable;
+	}
+
 	public String getOrderNo() {
 		return orderNo;
 	}
@@ -62,13 +72,11 @@ public class Order {
 
 	public String addNewOrder () {
 		OrderListBean.orderList.add(this);
-		return "displayTable?faces-redirect=true";	//Redirection added to avoid resubmission of same form on page refresh
+		return "addOrder?faces-redirect=true";	//Redirection added to avoid resubmission of same form on page refresh
 	}
 
 	public String deleteOrder () {
-		FacesContext fc = FacesContext.getCurrentInstance();
-		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
-		String orderToDelete = params.get("order");
+		String orderToDelete = lookupOrder();
 		System.out.println("Order to delete : "+ orderToDelete);
 		Order orderToDeleteObj = null;
 		for (Order o:OrderListBean.orderList) {
@@ -78,14 +86,53 @@ public class Order {
 			}
 		}
 		OrderListBean.orderList.remove(orderToDeleteObj);
-		try {
-			Thread.currentThread().sleep(5000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		return "displayTable?faces-redirect=true";
 	}
 
+	public String editOrder () {
+		String orderToDelete = lookupOrder();
+		System.out.println("Order to edit : "+ orderToDelete);
+		Order orderToEditObj = null;
+		for (Order o:OrderListBean.orderList) {
+			if (o.getOrderNo().equalsIgnoreCase(orderToDelete)) {
+				o.setEditable(Boolean.TRUE);
+				orderToEditObj = o;
+				break;
+			}
+		}
+		this.orderNo = orderToEditObj.orderNo;
+		this.price = orderToEditObj.price;
+		this.productName = orderToEditObj.productName;
+		this.qty = orderToEditObj.qty;
+		this.editable = orderToEditObj.editable;
+		return "displayTable?faces-redirect=true";
+	}
+
+	private String lookupOrder () {
+		FacesContext fc = FacesContext.getCurrentInstance();
+		Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
+		String orderToDelete = params.get("order");
+		return orderToDelete;
+	}
+
+	public String updateOrder (Order newOrder) {
+		String orderToDelete = newOrder.getOrderNo();
+		System.out.println("Order to update : "+ orderToDelete);
+		Order orderToDeleteObj = null;
+		for (Order o:OrderListBean.orderList) {
+			if (o.getOrderNo().equalsIgnoreCase(orderToDelete)) {
+				orderToDeleteObj = o;
+				break;
+			}
+		}
+		OrderListBean.orderList.remove(orderToDeleteObj);
+		OrderListBean.orderList.add(newOrder);
+		orderToDeleteObj.setEditable(Boolean.FALSE);
+		return "displayTable?faces-redirect=true";
+	}
+
+	public String gotoTable() {
+		return "displayTable?faces-redirect=true";
+	}
 	// getter and setter methods
 }

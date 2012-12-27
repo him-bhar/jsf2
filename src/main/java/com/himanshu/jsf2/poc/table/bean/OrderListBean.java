@@ -18,4 +18,8 @@ public class OrderListBean implements Serializable {
 		return orderList;
 	}
 
+	public String gotoAddOrder() {
+		return "addOrder?faces-redirect=true";
+	}
+
 }

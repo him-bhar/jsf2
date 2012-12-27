@@ -23,7 +23,11 @@
 		<h:outputLabel value="Quantity"></h:outputLabel>
 		<h:inputText value="#{orderBean.qty}" />
 		<br />
-		<h:commandButton value="Add New Order" action="#{orderBean.addNewOrder}"></h:commandButton>
+		<h:commandLink value="Add New Order" action="#{orderBean.addNewOrder}">
+		</h:commandLink>
+		<br />
+		<h:commandLink value="Display Table" action="#{orderBean.gotoTable}">
+		</h:commandLink>
 	</h:form>
 </h:body>
 </html>
