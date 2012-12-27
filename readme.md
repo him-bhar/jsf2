@@ -169,3 +169,7 @@ URL to look out for:
 28. JSF 2.0 and delete order using AJAX and table refresh : http://localhost:8080/JavaServerFaces/table/displayTable.jsf (Click on the delete link (present against each order) after adding a new order)
 
 29. JSF 2.0 and edit using AJAX and complete flow for CRUD on orders : http://localhost:8080/JavaServerFaces/table/displayTable.jsf
+
+30. JSF 2.0 and templating :
+     i.  http://localhost:8080/JavaServerFaces/templating/viewTemplatedPage.jsf
+     ii. http://localhost:8080/JavaServerFaces/templating/page1.jsf (With custom data)
