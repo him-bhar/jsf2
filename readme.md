@@ -187,3 +187,76 @@ URL to look out for:
 36. JSF 2.0 validateRequired example, validator for checking empty fields : http://localhost:8080/JavaServerFaces/validateRequired/validateRequired.jsf
 
 37. JSF 2.0 validateRegex example, validator for check inputs as per the regex set for that field (The above regex pattern is required 6 to 20 characters string with at least one digit, one upper case letter, one lower case letter and one special symbol ("@#$%"). ) : http://localhost:8080/JavaServerFaces/validateRegex/validateRegex.jsf
+
+38. JSF 2.0 and custom validator messages : http://localhost:8080/JavaServerFaces/customValidatorMessage/customValidatorMessage.jsf
+
+		The standard JSF conversion and validation error messages are too detail, technical or sometime, not really human readable. In this article, it shows you how to customize standard conversion or validation error message in JSF 2.0.
+
+			Summary Guide
+			i.    Find your message key from jsf-api-2.x.jar, "Messages.properties" file.
+			ii.	  Create your own properties file, and put the same message key you found in above "Messages.properties" file, and override it with your custom error message.
+    		iii.  Register your properties file in "faces-config.xml", put it as application level.
+    		iv.   Done.
+
+39. Custom converter in JSF 2.0 : http://localhost:8080/JavaServerFaces/customConverter/customConverter.jsf
+
+		Steps
+		i. 		Create a converter class by implementing javax.faces.convert.Converter interface.
+		ii. 	Override both getAsObject() and getAsString() methods.
+		iii. 	Assign an unique converter ID with @FacesConverter annotation.
+		iv. 	Link your custom converter class to JSF component via f:converter tag.
+
+
+40. Custom validator in JSF 2.0 : http://localhost:8080/JavaServerFaces/customValidator/customValidator.jsf
+
+	Steps
+
+    i. 		Create a validator class by implements javax.faces.validator.Validator interface.
+    ii.		Override validate() method.
+    iii.	Assign an unique validator ID via @FacesValidator annotation.
+    iv.		Reference custom validator class to JSF component via f:validator tag.
+
+ 41. Multiple Components Validator in JSF 2.0 :
+
+ 	Two ways :
+	i. Register PostValidateEvent, puts validation inside : http://localhost:8080/JavaServerFaces/multipleFieldsValidation_PostValidate/default.xhtml
+
+		The javax.faces.event.PostValidateEvent is a system event, that fire after all components are validated. The idea is register a PostValidateEvent, and attach to a validation method. see following :
+
+				<f:event listener="#{bean.methodToValidateMultipleFields}" type="postValidate" />
+
+		In PostValidateEvent, the "listener" method must have this signature public void method-name(ComponentSystemEvent event)". The rest of the code should be self-explanatory.
+
+	ii. Create a standard validator and get other components via f:attribute : http://localhost:8080/JavaServerFaces/multipleFieldValidator_Attribute/default.xhtml
+
+42. JSF 2.0 and actionListener : In JSF, "Action Events" are fired by clicking on a button or link component, e.g h:commandButton or h:commandLink.
+
+	Ways
+	i. Method binding : http://localhost:8080/JavaServerFaces/actionListener/actionListener.xhtml
+		In button or link component, you can specified a bean's method directly in the "actionListener" attribute.
+
+	ii. ActionListener : http://localhost:8080/JavaServerFaces/actionListener/actionListenerImpl.xhtml
+		In button or link component, add a "f:actionListener" tag inside, and specified an implementation class of ActionListener interface, and override its processAction().
+
+43. JSF 2.0 PostConstructApplicationEvent and PreDestroyApplicationEvent example :
+	Since JSF 2.0, you can register javax.faces.event.PostConstructApplicationEvent and javax.faces.event.PreDestroyApplicationEvent system event to manipulate the JSF application life cycle.
+
+	i. PostConstructApplicationEvent - Perform a custom post-configuration after application has started.
+	ii. PreDestroyApplicationEvent - Perform a custom cleanup task before application is about to be shut down.
+
+	Class to lookout for : FacesAppListener in current codebase, and to check its functionality, start server and check server startup logs with application deployed.
+
+44. JSF 2.0 PreRenderViewEvent example : http://localhost:8080/JavaServerFaces/preRenderView/default.xhtml
+	In JSF 2.0, you can attach a javax.faces.event.PreRenderViewEvent system event to perform custom task before a view root (JSF page) is display.
+	Create a normal bean, contains a method signature "public void method-name(ComponentSystemEvent event)", later you will ask listener to call this method.
+
+
+45. JSF 2.0 valueChangeListener example :
+
+	Ways
+	i. Method binding – In input component, specified a bean's method directly in the "valueChangeListener" attribute.
+	http://localhost:8080/JavaServerFaces/valueChangeListenerDemo/valueChangeListenerDemo.xhtml
+
+
+	ii. ValueChangeListener interface – In input component, add a "f:valueChangeListener" tag inside, and specified an implementation class of ValueChangeListener interface.
+	http://localhost:8080/JavaServerFaces/valueChangeListenerDemo/valueChangeListenerImpl.xhtml

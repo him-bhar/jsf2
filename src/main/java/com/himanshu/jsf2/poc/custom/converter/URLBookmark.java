@@ -1,0 +1,24 @@
+package com.himanshu.jsf2.poc.custom.converter;
+
+
+public class URLBookmark {
+
+	String fullURL;
+
+	public URLBookmark(String fullURL) {
+		this.fullURL = fullURL;
+	}
+
+	public String getFullURL() {
+		return fullURL;
+	}
+
+	public void setFullURL(String fullURL) {
+		this.fullURL = fullURL;
+	}
+
+	public String toString() {
+		return fullURL;
+	}
+
+}
