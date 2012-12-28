@@ -173,3 +173,17 @@ URL to look out for:
 30. JSF 2.0 and templating :
      i.  http://localhost:8080/JavaServerFaces/templating/viewTemplatedPage.jsf
      ii. http://localhost:8080/JavaServerFaces/templating/page1.jsf (With custom data)
+
+31. JSF 2.0 and convertnumber "f:convertNumber" is a standard converter, which converts String into a specified "Number" format. In addition, it's also used as a validator to make sure the input value is a valid number : http://localhost:8080/JavaServerFaces/numberConverter/numberConverter.jsf
+
+32. JSF 2.0 and convertDateTime, coverts String to formatted dateTime : http://localhost:8080/JavaServerFaces/dateTimeConverter/dateTimeConverter.jsf
+
+33. JSF 2.0 and validateLength : http://localhost:8080/JavaServerFaces/validateLength/validateLength.xhtml
+
+34. JSF 2.0 validateLongRange example used to set the min and max range allowed : http://localhost:8080/JavaServerFaces/validateLongRange/validateLongRange.jsf
+
+35. JSF 2.0 validateDoubleRange example, used to set min and max floating range allowed : http://localhost:8080/JavaServerFaces/validateDoubleRange/validateDoubleRange.jsf
+
+36. JSF 2.0 validateRequired example, validator for checking empty fields : http://localhost:8080/JavaServerFaces/validateRequired/validateRequired.jsf
+
+37. JSF 2.0 validateRegex example, validator for check inputs as per the regex set for that field (The above regex pattern is required 6 to 20 characters string with at least one digit, one upper case letter, one lower case letter and one special symbol ("@#$%"). ) : http://localhost:8080/JavaServerFaces/validateRegex/validateRegex.jsf
